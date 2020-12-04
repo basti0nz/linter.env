@@ -22,3 +22,13 @@ FOO=BAR
 ✅ Correct
 _FOO=BAR
  */
+
+type LeadingCharacter struct {}
+
+func (r LeadingCharacter) CheckString(str string) (string,error){
+    return str, nil
+}
+
+func (r LeadingCharacter) FixString(str string)(string, error) {
+	return str, nil
+}

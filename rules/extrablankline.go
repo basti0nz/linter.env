@@ -28,3 +28,8 @@ FOO=BAR
 <Blank line>
 
  */
+type ExtraBlankLine struct {}
+
+func (r ExtraBlankLine) CheckFile() {}
+
+func (r ExtraBlankLine) FixFile() {}

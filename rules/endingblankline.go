@@ -13,3 +13,9 @@ FOO=BAR
 FOO=BAR
 
  */
+
+type EndingBlankLine struct {}
+
+func (r EndingBlankLine) CheckFile() {}
+
+func (r EndingBlankLine) FixFile() {}
