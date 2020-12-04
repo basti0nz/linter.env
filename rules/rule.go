@@ -1,6 +1,8 @@
 package rules
 
 type Rule interface {
-	Check(str string)(string,error)
-	Fix(str string)(string, error)
+	CheckString(str string)(string,error)
+	FixString(str string)(string, error)
+	CheckFile()
+	FixFile()
 }

@@ -1,6 +1,7 @@
 package rules
 
 /* UnorderedKey
+Detects if a key is not alphabetically ordered:
 
 ❌ Wrong
 FOO=BAR
