@@ -1,8 +1,8 @@
 package rules
 
 type StringRuler interface {
-	CheckString(str string)(string,error)
-	FixString(str string)(string, error)
+	CheckString(str string)(bool, error, string)
+	FixString(str string)(bool, error, string)
 
 }
 type FileRuler interface {

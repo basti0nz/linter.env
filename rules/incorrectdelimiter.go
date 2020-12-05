@@ -11,12 +11,14 @@ FOO-BAR=FOOBAR
 FOO_BAR=FOOBAR
  */
 
+const DELIMITER = "_"
+
 type IncorrectDelimiter struct {}
 
-func (r IncorrectDelimiter) CheckString(str string) (string,error){
-    return str, nil
+func (r IncorrectDelimiter) CheckString(str string) (bool, error, string){
+    return false, nil, str
 }
 
-func (r IncorrectDelimiter) FixString(str string)(string, error) {
-	return str, nil
+func (r IncorrectDelimiter) FixString(str string)(bool, error, string) {
+	return false, nil, str
 }
