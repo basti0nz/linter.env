@@ -1,5 +1,10 @@
 package rules
 
+import (
+	"errors"
+	"strings"
+)
+
 // LowercaseKey
 /*
 Detects if a key has lowercase characters:
@@ -17,10 +22,18 @@ FOO_BAR=FOOBAR
 
 type LowercaseKey struct {}
 
+
+
+
 func (r LowercaseKey) CheckString(str string) (string,error){
-	return str, nil
+	splt := strings.Split(strings.TrimSuffix(str, "\n"), "=")
+	if len(splt) > 2 {
+
+	}
+	return str, errors.New("[LowercaseKey] This is not key=value string")
 }
 
 func (r LowercaseKey) FixString(str string)(string, error) {
-	return str, nil
+	ret, err := r.CheckString(str)
+	return ret, err
 }

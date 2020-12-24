@@ -16,6 +16,7 @@ func ShowRules()  {
 	"LowercaseKey",
 	"QuoteCharacter",
 	"SpaceCharacter",
+	"SpecialCharacter",
 	"TrailingWhitespace",
 	"UnorderedKey" }
 

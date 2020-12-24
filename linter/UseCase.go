@@ -3,6 +3,7 @@ package linter
 import (
 	"context"
 	"fmt"
+	"github.com/versus/linter.env/rules"
 	"os"
 	"path/filepath"
 	"strings"
@@ -44,4 +45,10 @@ func parseFile(path string, cfg interface{}) error {
 
 func parseENV(f *os.File, cfg interface{}) error {
 	return nil
+}
+
+func CheckLine(line string) bool {
+	leadCharacter := rules.NewLeadingCharacter()
+	return leadCharacter.CheckString(line)
+
 }
